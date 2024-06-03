@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang = "es" xmlns:th="http://thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title>TP4_PV</title>
@@ -7,15 +7,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<div class = "container">
+		<div class="container-fluid">
 			<header>
+				<div>
+					<img alt="Logo FI" src="/imagenes/logofi.png">
+				</div>
 				<div data-th-replace="~{fragments/fragmentos::navbar}">
 				</div>
 			</header>
 			<div class="row">
-				<main class="col-9">
-					<h1>HOLA MUNDO!</h1>
-				
+				<main class="col-9 p-3 mb-2 bg-body-tertiary">
+					<section id="acercade">
+						<h2>Acerca de</h2>
+						<p>La Facultad de Ingeniería de la Universidad Nacional de Jujuy (UNJu), ubicada en San Salvador de Jujuy, Argentina, se fundó en 1972 y
+						 ofrece carreras en Ingeniería Química, Ingeniería en Minas, Ingeniería Metalúrgica e Ingeniería Informática, entre muchas otras que se agregaron
+						 con el transcurso de los años. Comprometida con la excelencia académica y el desarrollo profesional, la facultad fomenta la innovación y el crecimiento 
+						 científico, contribuyendo al progreso de la región y del país. Es un espacio de formación integral que prepara a sus estudiantes para enfrentar los desafíos tecnológicos y 
+						 científicos del futuro.
+						</p>
+					</section>
+					<section id="noticias">
+						<h2>Ultimas Noticias</h2>
+						<div data-th-replace="~{fragments/fragmentos::noticias}"></div>
+					</section>
 				</main>
 			
 				<aside class="col-3">

@@ -5,39 +5,122 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary" data-th-fragment="navbar">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+	<div data-th-fragment="navbar">
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1d5f8b">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="/principal/index">Inicio</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarText">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link" aria-current="page" href="#acercade">Acerca de</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Carreras</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#noticias">Noticias</a>
+		        </li>
+		         <li class="nav-item">
+		          <a class="nav-link" href="#">Contacto</a>
+		        </li>
+		      </ul>
+		      <span class="navbar-text">
+		        Flammam Tvam Hoc Foco Accende <br>
+		        Enciende tu antorcha en este fuego
+		      </span>
+		    </div>
+		  </div>
+		</nav>
+	</div>
+	
+	<div class="list-group border border-primary-subtle" data-th-fragment="aside">
+      <a href="/principal/index" class="list-group-item list-group-item-action" aria-current="true" style="background-color: #1d5f8b">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1" style="color: white;">Pagina Principal</h5>
+        </div>
+        <p class="mb-1"></p>
+      </a>
+      <a href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" target="_blank" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Biblioteca</h5>
+          <small class="text-body-secondary"></small>
+        </div>
+        <p class="mb-1">Visita nuestra biblioteca.</p>
+        <small class="text-body-secondary">Enterate como hacerte socio en este enlace.</small>
+      </a>
+      <a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html" target="_blank" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Calendario academico</h5>
+        </div>
+        <p class="mb-1">Facultad de Ingeniería
+        Universidad Nacional de Jujuy.</p>
+        <small class="text-body-secondary">Ciclo lectivo 2024.</small>
+      </a>
+      <a href="https://www.fi.unju.edu.ar/institucional/historia.html" target="_blank" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Historia</h5>
+      </div>
+      <p class="mb-1">Conoce la historia de nuestra universidad.</p>
+      <small class="text-body-secondary">Desde 1972.</small>
+    </a>
     </div>
-  </div>
-</nav>
-
-<div class="card" style="width: 18rem;" data-th-fragment="aside">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+    
+    <div class="container" data-th-fragment="noticias">
+    	<section class="row">
+    		<div class="col-3">
+    			<div class="card" style="width: 18rem;">
+				  <img src="/imagenes/noticia1.jpg" class="card-img-top" alt="Noticia 1">
+				  <div class="card-body">
+				    <h5 class="card-title">Charla sobre Computación de Alto Rendimiento y Biometría por el Dr. Ricardo J. Barrientos</h5>
+				    <p class="card-text">La Facultad de Ciencias de la Computación e Informática invita a todos los estudiantes avanzados, de postgrado y 
+				    graduados a participar en la charla sobre Computación de Alto Rendimiento y Biometría.</p>
+				    <a href="https://www.fi.unju.edu.ar/noticias-generales/4590-charla-sobre-computacion-de-alto-rendimiento.html" target="_blank" class="btn btn-primary">Conoce mas</a>
+				  </div>
+				</div>
+    		</div>
+    		<div class="col-3">
+    			<div class="card" style="width: 18rem;">
+				  <img src="/imagenes/noticia2.png" class="card-img-top" alt="Noticia 1">
+				  <div class="card-body">
+				    <h5 class="card-title">Acreditación de la carrera Licenciatura en Ciencias Geológicas</h5>
+				    <p class="card-text">Recibimos el informe de ACREDITACIÓN DE CARRERAS DE GEOLOGÍA a nivel ARCU SUR. 
+				    Según el informe, la carrera Licenciatura en Ciencias Geológicas de esta Facultad cumple con los criterios para la acreditación previstos 
+				    en las cuatro dimensiones del proceso de acreditación.</p>
+				    <a href="https://www.fi.unju.edu.ar/noticias-generales/4589-acreditacion-de-la-carrera-licenciatura-en-ciencias-geologicas.html" target="_blank" class="btn btn-primary">Conoce mas</a>
+				  </div>
+				</div>
+    		</div>
+    		<div class="col-3">
+    			<div class="card" style="width: 18rem;">
+				  <img src="/imagenes/noticia3.jpg" class="card-img-top" alt="Noticia 1">
+				  <div class="card-body">
+				    <h5 class="card-title">75ª Reunión Plenaria y Asamblea del CONFEDI: Innovación y Futuro en la Formación de Ingenieros e Ingenieras con la 
+				    Participación de la Facultad de Ingeniería de la UNJu</h5>
+				    <p class="card-text">La Facultad de Ingeniería fue una de las 120 facultades públicas y privadas del país que asistió a la 75ª Reunión Plenaria
+				     y Asamblea del Consejo Federal de Decanas y Decanos de Ingeniería (CONFEDI), que se llevó a cabo en la Facultad de Ingeniería de la Universidad
+				      Nacional de Entre Ríos en Oro Verde, los días 16 y 17 de mayo del presente año.</p>
+				    <a href="https://www.fi.unju.edu.ar/codinoa/4588-75-reunion-plenaria-y-asamblea-del-confedi-fiunju.html" target="_blank" class="btn btn-primary">Conoce mas</a>
+				  </div>
+				</div>
+    		</div>
+    		<div class="col-3">
+    			<div class="card" style="width: 18rem;">
+				  <img src="/imagenes/noticia4.jpg" class="card-img-top" alt="Noticia 1">
+				  <div class="card-body">
+				    <h5 class="card-title">La Facultad de Ingeniería firmó convenio con la Municipalidad de San Salvador de Jujuy</h5>
+				    <p class="card-text">l Intendente de la Municipalidad de San Salvador de Jujuy, Arq. Raúl Eduardo Jorge, acompañado por el 
+				    Secretario de Desarrollo Humano, Rodrigo Altea, la Subsecretaria de Desarrollo Humano, Daniela Amerise, y la Jefa del Departamento 
+				    de Salud Mental, Lic. Adriana Bellman, del municipio capitalino, estuvo presente en la firma del acta acuerdo con esta unidad académica 
+				    representada por el Decano Ing. Luis Alejandro Vargas y la participación del área de Ingeniería Saludable de la FI y estudiantes avanzados de 
+				    la carrera de Ingeniería Industrial.</p>
+				    <a href="https://www.fi.unju.edu.ar/actas-acuerdos-convenios/4587-convenio-fiunju-municipalidad-de-san-salvador-de-jujuy.html" target="_blank" class="btn btn-primary">Conoce mas</a>
+				  </div>
+				</div>
+    		</div>
+    	</section>
+    </div>
 </body>
 </html>
