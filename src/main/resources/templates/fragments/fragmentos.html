@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div data-th-fragment="navbar">
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1d5f8b">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="/principal/index">Inicio</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarText">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link" aria-current="page" href="#acercade">Acerca de</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Carreras</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#noticias">Noticias</a>
+		        </li>
+		         <li class="nav-item">
+		          <a class="nav-link" href="#footer">Contacto</a>
+		        </li>
+		      </ul>
+		      <span class="navbar-text">
+		        Flammam Tvam Hoc Foco Accende <br>
+		        Enciende tu antorcha en este fuego
+		      </span>
+		    </div>
+		  </div>
+		</nav>
+	</div>
+	
+	<div class="list-group border border-primary-subtle" data-th-fragment="aside">
+      <a href="/principal/index" class="list-group-item list-group-item-action" aria-current="true" style="background-color: #1d5f8b">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1" style="color: white;">Pagina Principal</h5>
+        </div>
+        <p class="mb-1"></p>
+      </a>
+      <a href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" target="_blank" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Biblioteca</h5>
+          <small class="text-body-secondary"></small>
+        </div>
+        <p class="mb-1">Visita nuestra biblioteca.</p>
+        <small class="text-body-secondary">Enterate como hacerte socio en este enlace.</small>
+      </a>
+      <a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html" target="_blank" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Calendario academico</h5>
+        </div>
+        <p class="mb-1">Facultad de Ingeniería
+        Universidad Nacional de Jujuy.</p>
+        <small class="text-body-secondary">Ciclo lectivo 2024.</small>
+      </a>
+      <a href="https://www.fi.unju.edu.ar/institucional/historia.html" target="_blank" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Historia</h5>
+      </div>
+      <p class="mb-1">Conoce la historia de nuestra universidad.</p>
+      <small class="text-body-secondary">Desde 1972.</small>
+    </a>
+    </div>
+    
+    <div class="container" data-th-fragment="noticias">
+    <section class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border border-primary-subtle" style="width: 18rem;">
+                <img src="/imagenes/noticia1.jpg" class="card-img-top" alt="Noticia 1">
+                <div class="card-body">
+                    <h5 class="card-title">Charla sobre Computación de Alto Rendimiento y Biometría por el Dr. Ricardo J. Barrientos</h5>
+                    <p class="card-text">La Facultad de Ciencias de la Computación e Informática invita a todos los estudiantes avanzados, de postgrado y graduados
+                     a participar en la charla sobre Computación de Alto Rendimiento y Biometría.</p>
+                    <a href="https://www.fi.unju.edu.ar/noticias-generales/4590-charla-sobre-computacion-de-alto-rendimiento.html" target="_blank" class="btn" style="background-color: #1d5f8b; color: white">Conoce mas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border border-primary-subtle" style="width: 18rem;">
+                <img src="/imagenes/noticia2.png" class="card-img-top" alt="Noticia 1">
+                <div class="card-body">
+                    <h5 class="card-title">Acreditación de la carrera Licenciatura en Ciencias Geológicas</h5>
+                    <p class="card-text">Recibimos el informe de ACREDITACIÓN DE CARRERAS DE GEOLOGÍA a nivel ARCU SUR. Según el informe, la carrera
+                     Licenciatura en Ciencias Geológicas de esta Facultad cumple con los criterios para la acreditación previstos en las cuatro dimensiones del proceso de acreditación.</p>
+                    <a href="https://www.fi.unju.edu.ar/noticias-generales/4589-acreditacion-de-la-carrera-licenciatura-en-ciencias-geologicas.html" target="_blank" class="btn" style="background-color: #1d5f8b; color: white">Conoce mas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border border-primary-subtle" style="width: 18rem;">
+                <img src="/imagenes/noticia3.jpg" class="card-img-top" alt="Noticia 1">
+                <div class="card-body">
+                    <h5 class="card-title">75ª Reunión Plenaria y Asamblea del CONFEDI: Innovación y Futuro en la Formación de Ingenieros e 
+                    Ingenieras con la Participación de la Facultad de Ingeniería de la UNJu</h5>
+                    <p class="card-text">La Facultad de Ingeniería fue una de las 120 facultades públicas y privadas del país que asistió a la 
+                    75ª Reunión Plenaria y Asamblea del Consejo Federal de Decanas y Decanos de Ingeniería (CONFEDI), que se llevó a cabo en la Facultad 
+                    de Ingeniería de la Universidad Nacional de Entre Ríos en Oro Verde, los días 16 y 17 de mayo del presente año.</p>
+                    <a href="https://www.fi.unju.edu.ar/codinoa/4588-75-reunion-plenaria-y-asamblea-del-confedi-fiunju.html" target="_blank" class="btn" style="background-color: #1d5f8b; color: white">Conoce mas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card border border-primary-subtle" style="width: 18rem;">
+                <img src="/imagenes/noticia4.jpg" class="card-img-top" alt="Noticia 1">
+                <div class="card-body">
+                    <h5 class="card-title">La Facultad de Ingeniería firmó convenio con la Municipalidad de San Salvador de Jujuy</h5>
+                    <p class="card-text">El Intendente de la Municipalidad de San Salvador de Jujuy, Arq. Raúl Eduardo Jorge, acompañado por el Secretario 
+                    de Desarrollo Humano, Rodrigo Altea, la Subsecretaria de Desarrollo Humano, Daniela Amerise, y la Jefa del Departamento de Salud Mental, 
+                    Lic. Adriana Bellman, del municipio capitalino, estuvo presente en la firma del acta acuerdo con esta unidad académica representada por 
+                    el Decano Ing. Luis Alejandro Vargas y la participación del área de Ingeniería Saludable de la FI y estudiantes avanzados de la carrera de Ingeniería Industrial.</p>
+                    <a href="https://www.fi.unju.edu.ar/actas-acuerdos-convenios/4587-convenio-fiunju-municipalidad-de-san-salvador-de-jujuy.html" target="_blank" class="btn" style="background-color: #1d5f8b; color: white">Conoce mas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	</div>
+	
+	<div data-th-fragment="footer" style="background-color: #20232e; color: grey">
+		<section class="row">
+			<ul class="col-4 list-group ms-4">
+				<h4 class="ms-2" style="color:white">Contacto</h4>
+				<li class="ms-4"><img alt="Direccion" src="/imagenes/direccion.png"> Dirección: Ítalo Palanca Nº 10</li>
+				<li class="ms-4"><img class="ms-2"alt="Telefono" width="25" height="25" src="/imagenes/telefono.png"> Teléfono: 0388 422-1580</li>
+				<li class="ms-4"><img alt="Mail" src="/imagenes/mail.png"> Mail: info@fi.unju.edu.ar</li>
+			</ul>
+			<ul class="col-4 list-group ms-4">
+				<h4 class="ms-2" style="color:white">Redes Sociales</h4>
+				<li><a href="https://www.facebook.com/fiunju/" target="_blank" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Facebook</a></li>
+				<li><a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" target="_blank" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Youtube</a></li>
+				<li><a href="https://www.linkedin.com/school/facultad-de-ingenieria-unju" target="_blank" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Linkedin</a></li>
+				<li><a href="https://www.instagram.com/fiunju/" target="_blank" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Instagram</a></li>
+			</ul>
+			<ul class="col-3 list-group ms-4">
+				<h4 class="ms-2" style="color:white">Derechos de autor</h4>
+				<li>Copyright © 2014-2024 - Facultad de Ingeniería - UNJu</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
