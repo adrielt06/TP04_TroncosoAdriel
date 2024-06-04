@@ -12,7 +12,7 @@
 				<div>
 					<img alt="Logo FI" src="/imagenes/logofi.png">
 				</div>
-				<div data-th-replace="~{fragments/fragmentos::navbar}">
+				<div data-th-replace="~{layouts/header::navbar}">
 				</div>
 			</header>
 			<div class="row">
@@ -28,17 +28,17 @@
 					</section>
 					<section id="noticias">
 						<h2>Ultimas Noticias</h2>
-						<div data-th-replace="~{fragments/fragmentos::noticias}"></div>
+						<div data-th-replace="~{layouts/fragmentos::noticias}"></div>
 					</section>
 				</main>
 			
 				<aside class="col-3">
-					<div data-th-replace="~{fragments/fragmentos::aside}">
+					<div data-th-replace="~{layouts/fragmentos::aside}">
 					</div>
 				</aside>
 			</div>
 			<footer id="footer">
-				<div data-th-replace="~{fragments/fragmentos::footer}">
+				<div data-th-replace="~{layouts/footer::footer}">
 				</div>
 			</footer>
 		</div>
