@@ -16,6 +16,13 @@ public class DocenteController {
 	@Autowired
 	Docente nuevoDocente = new Docente();
 	
+	@GetMapping("/tablaDocentes")
+	public ModelAndView getTablaDocentes() {
+		ModelAndView mv = new ModelAndView("tablaDocentes");
+		mv.addObject("listadoDocentes", ListadoDocentes.listarDocentes());
+		return mv;
+	}
+	
 	@GetMapping("/formDocente")
 	public ModelAndView getFormDocente() {
 		ModelAndView mv = new ModelAndView("formDocente");

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "es" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Listado de Alumnos</title>
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+	<body>
+		<div class="container-fluid">
+		<header>
+			<div>
+				<img alt="Logo FI" src="/imagenes/logofi.png">
+			</div>
+			<div data-th-replace="~{layouts/header::navbar}">
+			</div>
+		</header>
+		
+		<div class="container">
+			<table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th scope="col">LU</th>
+			      <th scope="col">DNI</th>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Apellido</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Telefono</th>
+			      <th scope="col">Fecha Nacimiento</th>
+			      <th scope="col">Domicilio</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr data-th-each="alumno : ${listadoAlumnos}">
+			      <td data-th-text="${alumno.lu}"></td>
+			      <td data-th-text="${alumno.dni}"></td>
+			      <td data-th-text="${alumno.nombre}"></td>
+			      <td data-th-text="${alumno.apellido}"></td>
+			      <td data-th-text="${alumno.email}"></td>
+			      <td data-th-text="${alumno.telefono}"></td>
+			      <td data-th-text="${alumno.fechaNac}"></td>
+			      <td data-th-text="${alumno.domicilio}"></td>
+			      	<td>
+						<a data-th-href="@{'/borrarAlumno/'+${alumno.lu}}" class="btn btn-danger">Borrar</a>					
+						<a data-th-href="@{'/editarAlumno/'+${alumno.lu}}" class="btn btn-warning" >Modificar</a>
+					</td>
+			    </tr>
+			   </tbody>
+			</table>
+			</div>
+			
+		<footer id="footer">
+			<div data-th-replace="~{layouts/footer::footer}">
+			</div>
+		</footer>
+    </div>
+			<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+	</body>
+</html>

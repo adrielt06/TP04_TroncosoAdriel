@@ -16,6 +16,13 @@ public class CarreraController {
 	@Autowired
 	Carrera nuevaCarrera = new Carrera();
 	
+	@GetMapping("/tablaCarreras")
+	public ModelAndView getTablaAlumnos() {
+		ModelAndView mv = new ModelAndView("tablaCarreras");
+		mv.addObject("listadoCarreras", ListadoCarreras.listarCarreras());
+		return mv;
+	}
+	
 	@GetMapping("/formCarrera")
 	public ModelAndView getFormCarrera() {
 		//vista de html (formulario)

@@ -16,6 +16,13 @@ public class AlumnoController {
 	@Autowired
 	Alumno nuevoAlumno = new Alumno();
 	
+	@GetMapping("/tablaAlumnos")
+	public ModelAndView getTablaAlumnos() {
+		ModelAndView mv = new ModelAndView("tablaAlumnos");
+		mv.addObject("listadoAlumnos", ListadoAlumnos.listarAlumnos());
+		return mv;
+	}
+	
 	@GetMapping("/formAlumno")
 	public ModelAndView getFormAlumno() {
 		ModelAndView mv = new ModelAndView("formAlumno");

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "es" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Listado de Docentes</title>
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+	<body>
+		<div class="container-fluid">
+		<header>
+			<div>
+				<img alt="Logo FI" src="/imagenes/logofi.png">
+			</div>
+			<div data-th-replace="~{layouts/header::navbar}">
+			</div>
+		</header>
+		
+		<div class="container">
+			<table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th scope="col">Legajo</th>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Apellido</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Telefono</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr data-th-each="docente : ${listadoDocentes}">
+			      <td data-th-text="${docente.legajo}"></td>
+			      <td data-th-text="${docente.nombre}"></td>
+			      <td data-th-text="${docente.apellido}"></td>
+			      <td data-th-text="${docente.email}"></td>
+			      <td data-th-text="${docente.telefono}"></td>
+			      	<td>
+						<a data-th-href="@{'/borrarDocente/'+${docente.legajo}}" class="btn btn-danger">Borrar</a>					
+						<a data-th-href="@{'/editarDocente/'+${docente.legajo}}" class="btn btn-warning" >Modificar</a>
+					</td>
+			    </tr>
+			   </tbody>
+			</table>
+			</div>
+			
+		<footer id="footer">
+			<div data-th-replace="~{layouts/footer::footer}">
+			</div>
+		</footer>
+    </div>
+			<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+	</body>
+</html>
