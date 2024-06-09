@@ -2,12 +2,17 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alumno {
 	private String dni;
 	private String nombre;
 	private String apellido;
 	private String email;
 	private String telefono;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaNac;
 	private String domicilio;
 	private String lu;

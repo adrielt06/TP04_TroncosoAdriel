@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "es" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulario Carrera</title>
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<div>
+				<img alt="Logo FI" src="/imagenes/logofi.png">
+			</div>
+			<div data-th-replace="~{layouts/header::navbar}">
+			</div>
+		</header>
+	
+			<div style="background-color: rgb(179, 255, 245)">
+			  <div class="container">
+			    <div class="row justify-content-center">
+			      <div class="col-md-8">
+			        <h1 class="text-center">FORMULARIO CARRERA</h1>
+			        <div class="card">
+			          <div class="card-body">
+			            <form class="row gy-2 gx-3 align-items-center" data-th-object="${nuevaCarrera}" 
+							data-th-action="${band}?@{/editarCarrera}:@{/guardarCarrera}" 
+							method="post">
+			              <div class="row mb-3">
+			                <label for="inputCodigo" class="col-sm-2 col-form-label">Codigo</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputCodigo" required placeholder="Codigo carrera" data-th-field="*{codigo}" data-th-readonly=${band}>
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputNombre" required placeholder="Nombre completo" data-th-field="*{nombre}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputCantAnios" class="col-sm-2 col-form-label">Cantidad de años</label>
+			                <div class="col-sm-10">
+			                  <input type="number" class="form-control" id="inputCantAnios" required placeholder="Numero sin simbolos" data-th-field="*{cantAnios}">
+			                </div>
+			              </div>
+			              <button type="submit" class="btn btn-primary">Guardar</button>
+			            </form>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+						
+    
+    	<footer id="footer">
+			<div data-th-replace="~{layouts/footer::footer}">
+			</div>
+		</footer>
+    </div>
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

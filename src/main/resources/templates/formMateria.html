@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "es" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulario Materia</title>
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<div>
+				<img alt="Logo FI" src="/imagenes/logofi.png">
+			</div>
+			<div data-th-replace="~{layouts/header::navbar}">
+			</div>
+		</header>
+	
+			<div style="background-color: rgb(179, 255, 245)">
+			  <div class="container">
+			    <div class="row justify-content-center">
+			      <div class="col-md-8">
+			        <h1 class="text-center">FORMULARIO MATERIA</h1>
+			        <div class="card">
+			          <div class="card-body">
+			            <form class="row gy-2 gx-3 align-items-center" data-th-object="${nuevaMateria}" 
+							data-th-action="${band}?@{/editarMateria}:@{/guardarMateria}" 
+							method="post">
+			              <div class="row mb-3">
+			                <label for="inputCodigo" class="col-sm-2 col-form-label">Codigo</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputCodigo" required placeholder="Codigo Materia" data-th-field="*{codigo}" data-th-readonly=${band}>
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputNombre" required placeholder="Nombre materia" data-th-field="*{nombre}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputCurso" class="col-sm-2 col-form-label">Curso</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputCurso" required placeholder="Curso de materia" data-th-field="*{curso}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputCantHoras" class="col-sm-2 col-form-label">Cantidad de Horas</label>
+			                <div class="col-sm-10">
+			                  <input type="number" class="form-control" id="inputCantHoras" required placeholder="Carga horaria total" data-th-field="*{cantidadHoras}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputModalidad" class="col-sm-2 col-form-label">Modalidad</label>
+			                <div class="col-sm-10">
+			                  <select class="form-control" id="inputTelefono" required data-th-field="*{modalidad}">
+			                  		<option value=""> Seleccionar modalidad</option>
+			                  		<option value="Presencial">Presencial</option>
+									<option value="Virtual">Virtual</option>        
+			                  </select>
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputDocente" class="col-sm-2 col-form-label">Docente</label>
+			                <div class="col-sm-10">
+			                 	<select id="inputDocente" data-th-field="*{docente.legajo}" class="form-control" required>
+			                 		<option value=""> Seleccionar docente</option>
+			                 		<option data-th-each="docente : ${listadoDocentes}" data-th-value="${docente.legajo}" data-th-text="${docente.apellido}"></option>
+			                 	</select>
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputDocente" class="col-sm-2 col-form-label">Carrera</label>
+			                <div class="col-sm-10">
+			                 	<select id="inputCarrera" data-th-field="*{carrera.codigo}" class="form-control" required>
+			                 		<option value=""> Seleccionar carrera</option>
+			                 		<option data-th-each="carrera : ${listadoCarreras}" data-th-value="${carrera.codigo}" data-th-text="${carrera.nombre}"></option>
+			                 	</select>
+			                </div>
+			              </div>
+			              <button type="submit" class="btn btn-primary">Guardar</button>
+			            </form>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+						
+    
+    	<footer id="footer">
+			<div data-th-replace="~{layouts/footer::footer}">
+			</div>
+		</footer>
+    </div>
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

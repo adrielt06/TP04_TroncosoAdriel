@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "es" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulario Docente</title>
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<div>
+				<img alt="Logo FI" src="/imagenes/logofi.png">
+			</div>
+			<div data-th-replace="~{layouts/header::navbar}">
+			</div>
+		</header>
+	
+			<div style="background-color: rgb(179, 255, 245)">
+			  <div class="container">
+			    <div class="row justify-content-center">
+			      <div class="col-md-8">
+			        <h1 class="text-center">FORMULARIO DOCENTE</h1>
+			        <div class="card">
+			          <div class="card-body">
+			            <form class="row gy-2 gx-3 align-items-center" data-th-object="${nuevoDocente}" 
+							data-th-action="${band}?@{/editarDocente}:@{/guardarDocente}" 
+							method="post">
+			              <div class="row mb-3">
+			                <label for="inputLegajo" class="col-sm-2 col-form-label">Legajo</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputLegajo" required placeholder="Legajo de docente" data-th-field="*{legajo}" data-th-readonly=${band}>
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputNombre" required placeholder="Nombre completo" data-th-field="*{nombre}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputApellido" class="col-sm-2 col-form-label">Apellido</label>
+			                <div class="col-sm-10">
+			                  <input type="text" class="form-control" id="inputApellido" required placeholder="Apellido completo" data-th-field="*{apellido}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+			                <div class="col-sm-10">
+			                  <input type="email" class="form-control" id="inputEmail" required placeholder="xxxx@xxxx.xx" data-th-field="*{email}">
+			                </div>
+			              </div>
+			              <div class="row mb-3">
+			                <label for="inputTelefono" class="col-sm-2 col-form-label">Telefono</label>
+			                <div class="col-sm-10">
+			                  <input type="number" class="form-control" id="inputTelefono" required placeholder="Telefono sin simbolos" data-th-field="*{telefono}">
+			                </div>
+			              </div> 
+			              <button type="submit" class="btn btn-primary">Guardar</button>
+			            </form>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+						
+    
+    	<footer id="footer">
+			<div data-th-replace="~{layouts/footer::footer}">
+			</div>
+		</footer>
+    </div>
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
